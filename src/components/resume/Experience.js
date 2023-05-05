@@ -23,22 +23,22 @@ const Experience = () => {
             of automotive replacement parts and accessories."
           />
           <ResumeCard
-            title="Coordinator Sales Associate "
+            title="IT Coordinator/Sales Associate "
             subTitle="GPC Napa Auto Parts 2020-Present"
             result="USA"
-            des="The Napa Auto Parts division specifically 
-            specializes in providing automotive replacement 
-            parts, tools, and equipment to both professional 
-            mechanics and do-it-yourself customers."
+            des="Maintained fax machine and other physical equipment .
+            Arrange and create and maintain inventory correctly. 
+            Responsible for maintaining the IT maintenance and upgrade schedule.
+            Responsible for maintaining the asset management program that applied to IT equipment loaned to field workers."
           />
           <ResumeCard
-            title="Retail IT Solutions"
+            title="IT Coordinator"
             subTitle="GPC Napa Auto Parts 2021-Present"
             result="USA"
-            des="The Napa Auto Parts division specifically 
-            specializes in providing automotive replacement 
-            parts, tools, and equipment to both professional 
-            mechanics and do-it-yourself customers."
+            des="Maintained fax machine and other physical equipment .
+            Arrange and create and maintain inventory correctly. 
+            Responsible for maintaining the IT maintenance and upgrade schedule.
+            Responsible for maintaining the asset management program that applied to IT equipment loaned to field workers.."
           />
         </div>
       </div>

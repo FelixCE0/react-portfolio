@@ -56,7 +56,7 @@ const Achievement = () => {
              of automotive replacement parts and accessories."
           />
           <ResumeCard
-            title="Coordinator Sales Associate"
+            title="IT Coordinator/Sales Associate"
             subTitle="GPC Napa Auto Parts 2020-Present"
             result="Success"
             des="The Napa Auto Parts division specifically
