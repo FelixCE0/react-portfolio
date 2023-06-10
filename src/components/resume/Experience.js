@@ -32,13 +32,13 @@ const Experience = () => {
             Responsible for maintaining the asset management program that applied to IT equipment loaned to field workers."
           />
           <ResumeCard
-            title="IT Coordinator"
-            subTitle="GPC Napa Auto Parts 2021-Present"
+            title="Shopify Web Developer"
+            subTitle="ECODE 2023-Present"
             result="USA"
-            des="Maintained fax machine and other physical equipment .
-            Arrange and create and maintain inventory correctly. 
-            Responsible for maintaining the IT maintenance and upgrade schedule.
-            Responsible for maintaining the asset management program that applied to IT equipment loaned to field workers.."
+            des="Installing and configuring Shopify apps to add specific features and functionality to the online store. 
+            Setting up the basic structure and settings of a new Shopify store.
+            Adding and organizing products within the Shopify store. 
+            Ensuring the Shopify store is responsive and displays correctly on various devices and screen sizes. "
           />
         </div>
       </div>

@@ -66,13 +66,10 @@ const Achievement = () => {
             "
           />
           <ResumeCard
-            title="Retail IT Solutions"
-            subTitle="GPC Napa Auto Parts 2021-Present"
+            title="Shopify Web Developer"
+            subTitle="Ecode 2023-Present"
             result="Success"
-            des="The Napa Auto Parts division specifically
-            specializes in providing automotive replacement parts,
-             tools, and equipment to both professional mechanics
-              and do-it-yourself customers."
+            des="Retail Apparel and Fashoin"
           />
         </div>
       </div>
