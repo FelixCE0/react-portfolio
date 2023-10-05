@@ -66,7 +66,7 @@ const Achievement = () => {
             "
           />
           <ResumeCard
-            title="Shopify Web Developer"
+            title="Web Developer"
             subTitle="Ecode 2023-Present"
             result="Success"
             des="Retail Apparel and Fashoin"

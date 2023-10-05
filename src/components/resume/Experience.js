@@ -32,7 +32,7 @@ const Experience = () => {
             Responsible for maintaining the asset management program that applied to IT equipment loaned to field workers."
           />
           <ResumeCard
-            title="Shopify Web Developer"
+            title=" Web Developer"
             subTitle="ECODE 2023-Present"
             result="USA"
             des="Installing and configuring Shopify apps to add specific features and functionality to the online store. 
