@@ -24,7 +24,7 @@ const ProjectsCard = ({ FaGlobe1, title, des, src }) => {
                   <BsGithub /></a>
               </span>
 
-              <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
+              {/* <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
                 <a href="https://felixce0.github.io/The-Jazzy-Bee/index.html">
                   <FaGlobe /></a>
               </span>
@@ -35,7 +35,7 @@ const ProjectsCard = ({ FaGlobe1, title, des, src }) => {
 
               <span className="text-lg w-10 h-10 rounded-full bg-black inline-flex justify-center items-center text-gray-400 hover:text-designColor duration-300 cursor-pointer">
                 <a href="https://felixce0.github.io/Todolist/">
-                  <FaGlobe /></a></span>
+                  <FaGlobe /></a></span> */}
             </div>
           </div>
           <p className="text-sm tracking-wide mt-3 hover:text-gray-100 duration-300">

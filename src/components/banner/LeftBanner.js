@@ -1,11 +1,11 @@
 import React from 'react'
 import { useTypewriter, Cursor } from "react-simple-typewriter";
-import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact, FaHtml5, FaCss3 } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaReact, FaHtml5, FaCss3, FaPhp, FaLaravel, FaVuejs, FaGithub, FaInstagram } from "react-icons/fa";
 import { SiTailwindcss, SiFigma, SiNextdotjs, SiJavascript } from "react-icons/si";
 
 const LeftBanner = () => {
   const [text] = useTypewriter({
-    words: ["Skillful Coder.", "Front-End Developer.", "Adobe Designer."],
+    words: ["Skillful Coder.", "Full-Stack Developer.", "Adobe Designer."],
     loop: true,
     typeSpeed: 20,
     deleteSpeed: 10,
@@ -23,20 +23,14 @@ const LeftBanner = () => {
           <Cursor
             cursorBlinking="false"
             cursorStyle="|"
-            cursorColor="#ff014f"
+            cursorColor="#A7F3D0"
           />
         </h2>
         <p className="text-base font-bodyFont leading-6 tracking-wide">
-          Experienced web developer adept in all stages of
-          advanced web development.
-          Knowledgeable in user interface, testing,
-          and debugging processes.
-          Bringing forth expertise in design,
-          installation, testing and maintenance of web systems.
-          Equipped with a diverse and promising skill-set.
-          Proficient in an assortment of technologies,
-          including Javascript, ReactJS, HTML5, CSS3,
-          and Microsoft SQL Server.
+          Results-driven Software Engineer with 5+ years of experience in developing scalable web applications using
+          Laravel, FilamentPHP, React, and Node.js. Proven track record in leading development teams, optimizing
+          codebases, and delivering high-quality software solutions. Adept at solving complex problems and passionate
+          about continuous learning and innovation.
         </p>
       </div>
       <div className="flex flex-col xl:flex-row gap-6 lgl:gap-0 justify-between">
@@ -46,11 +40,11 @@ const LeftBanner = () => {
           </h2>
           <div className="flex gap-4">
             <span className="bannerIcon"><a href="https://www.linkedin.com/in/felix-correa-hidalgo-210313254/">
-              <FaFacebookF /></a>
+              <FaInstagram /></a>
 
             </span>
-            <span className="bannerIcon">
-              <FaTwitter />
+            <span className="bannerIcon"><a href="https://github.com/FelixCE0">
+              <FaGithub /></a>
             </span>
             <span className="bannerIcon"><a href="https://www.linkedin.com/in/felix-correa-hidalgo-210313254/">
               <FaLinkedinIn /></a>
@@ -66,13 +60,13 @@ const LeftBanner = () => {
               <FaReact />
             </span>
             <span className="bannerIcon">
-              <FaHtml5 />
+              <FaPhp />
             </span>
             <span className="bannerIcon">
-              <FaCss3 />
+              <FaLaravel />
             </span>
             <span className="bannerIcon">
-              <SiJavascript />
+              <FaVuejs />
             </span>
           </div>
         </div>

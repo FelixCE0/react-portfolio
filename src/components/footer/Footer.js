@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+import { FaFacebookF, FaTwitter, FaLinkedinIn, FaGithub, FaInstagram } from "react-icons/fa";
 import { logo } from "../../assets/index"
 
 const Footer = () => {
@@ -9,10 +9,10 @@ const Footer = () => {
         <img className="w-32" src={logo} alt="logo" />
         <div className="flex gap-4">
           <span className="bannerIcon">
-            <FaFacebookF />
+            <FaInstagram />
           </span>
           <span className="bannerIcon">
-            <FaTwitter />
+            <FaGithub />
           </span>
           <span className="bannerIcon">
             <a href="https://www.linkedin.com/in/felix-correa-hidalgo-210313254/">
