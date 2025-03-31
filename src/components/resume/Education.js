@@ -19,7 +19,7 @@ const Education = () => {
           <ResumeCard
             title="Associate of Science"
             subTitle="Broward College 2018-2021"
-            result="3.90/4"
+            result="3.50/4"
             des="Complete two years of specialized training designed 
             to allow you enter the workforce in a high-demand career
              with guaranteed job skills or continue your education 

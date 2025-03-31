@@ -93,7 +93,7 @@ const Testimonial = () => {
       className="w-full py-20 border-b-[1px] border-b-black"
     >
       <div className="flex justify-center items-center text-center">
-        <Title title="WHAT CLIENTS SAY" des="Testimonial" />
+        <Title title="WHAT Recommendations SAY" des="Testimonial" />
       </div>
       <div className="max-w-6xl mx-auto">
         {/* ================ Slider One ================== */}
@@ -110,9 +110,10 @@ const Testimonial = () => {
                   <p className="text-xs uppercase text-designColor tracking-wide mb-2">
 
                   </p>
-                  <h3 className="text-2xl font-bold">Maria Hernandez</h3>
+                  <h3 className="text-2xl font-bold">
+                    Mohammed Dayraki</h3>
                   <p className="text-base tracking-wide text-gray-500">
-                    Operation Officer
+                    Software Application Engineer @simplyphp
                   </p>
                 </div>
               </div>
@@ -122,26 +123,21 @@ const Testimonial = () => {
                   <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
                     <div>
                       <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                        Mobile App Design.
+                        Web Development
                       </h3>
                       <p className="text-base text-gray-400 mt-3">
-                        via Google - Mar 4, 2022 - Sep 30, 2023 test
+                        via Linkediin - March, 2025
                       </p>
-                    </div>
-                    <div className="text-yellow-500 flex gap-1">
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
                     </div>
                   </div>
                   <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                    The app has a simple and intuitive interface,
-                    which makes it easy to use. It offers a range of
-                    powerful features such as symbols, layers, and
-                    vector editing tools
-                    that help me to create intricate and detailed designs.
+                    I had the pleasure of working with Felix as part of my team, and I can confidently say that he is a dedicated and passionate developer. One of the things that stands out about Felix is his eagerness to learn—he’s always exploring new technologies and approaches to improve his work.
+
+                    Beyond his technical skills, Felix brings creativity to the table, especially when it comes to frontend design. His ability to think outside the box and deliver visually appealing, user-friendly interfaces has been a great asset to our projects.
+
+                    Felix also has a strong sense of curiosity. He doesn’t hesitate to ask insightful questions to understand how things work, which not only helps him grow but also fosters a culture of continuous learning within the team. Additionally, he communicates issues effectively, ensuring that roadblocks are addressed promptly rather than slowing down progress.
+
+                    I have no doubt that Felix will continue to excel in his career, and I highly recommend him to any team looking for a proactive and creative developer.
                   </p>
                 </div>
               </div>
@@ -161,9 +157,10 @@ const Testimonial = () => {
                   <p className="text-xs uppercase text-designColor tracking-wide mb-2">
 
                   </p>
-                  <h3 className="text-2xl font-bold">Javier Carrazana</h3>
+                  <h3 className="text-2xl font-bold">
+                    Linkhon Hasan</h3>
                   <p className="text-base tracking-wide text-gray-500">
-                    Operation Officer
+                    Full Stack Developer|Fedex
                   </p>
                 </div>
               </div>
@@ -173,26 +170,23 @@ const Testimonial = () => {
                   <div className="flex flex-col justify-between lgl:items-center py-6 border-b-2 border-b-gray-900">
                     <div>
                       <h3 className="text-xl lgl:text-2xl font-medium tracking-wide">
-                        Mobile App Design.
+                        Shopify Web Development
                       </h3>
                       <p className="text-base text-gray-400 mt-3">
-                        via Google - Mar 4, 2022 - Feb 30, 2023
+                        via Linkediin - March, 2025
                       </p>
-                    </div>
-                    <div className="text-yellow-500 flex gap-1">
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
-                      <RiStarFill />
                     </div>
                   </div>
                   <p className="text-base font-titleFont text-gray-400 font-medium tracking-wide leading-6">
-                    One of the most significant advantages of Sketch is its collaboration capabilities.
-                    I can easily collaborate with my team members,
-                    share designs, and collect feedback in real-time.
-                    This has helped us to work seamlessly and deliver
-                    high-quality work on time.
+                    I had the pleasure of working with Felix Correa Hidalgo on several projects, and I cannot recommend him highly enough. Felix is an exceptional front-end developer with a strong proficiency in PHP, and his contributions have been invaluable to our team.
+
+                    Felix’s ability to collaborate with established apps on Shopify is particularly impressive. He played a key role in implementing new features that significantly enhanced our website’s functionality, ensuring our online store remained competitive and user-friendly. Felix’s expertise in optimizing web content for responsiveness across both desktop and mobile platforms greatly improved our customer experience, ensuring our site looked and performed seamlessly on any device.
+
+                    Moreover, his technical skills in JavaScript allowed him to make key improvements to our product pages and integrate advanced features such as pre-order functionality, all while adhering to Shopify's policies. Felix also demonstrated his problem-solving skills by optimizing the site’s load times, replacing existing function calls with promise-based callback functions, which resulted in noticeable performance improvements.
+
+                    On top of his technical acumen, Felix has a strong understanding of SEO practices. He led our efforts to improve SEO methodology, driving a consistent 3% month-over-month increase in site traffic. His dedication to improving site performance and user experience is unmatched.
+
+                    Felix’s combination of front-end development skills, PHP expertise, and ability to drive continuous improvements in web functionality and SEO makes him a standout developer. He is an asset to any team, and I have no doubt he will continue to thrive in any future projects.
                   </p>
                 </div>
               </div>
