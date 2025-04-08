@@ -1,29 +1,74 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://api.fontshare.com/v2/css?f[]=cal-sans@400,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .bannerIcon{
-        @apply w-16 h-16 bg-black bg-opacity-25 text-gray-200 text-xl inline-flex items-center justify-center rounded-md shadow-shadowOne hover:bg-opacity-40 hover:-translate-y-1 transition-all hover:text-designColor cursor-pointer duration-300;
+@layer base {
+    body {
+        @apply antialiased;
     }
-    .resumeLi {
-    @apply w-full h-20 bg-black bg-opacity-25 text-xl text-gray-300 flex justify-center cursor-pointer hover:bg-opacity-40 duration-300 items-center border-[1px] rounded-none;
-         }
-.bgOpacity {
-@apply bg-black bg-opacity-40;
-                  }
-    .contactInput{
-        @apply w-full h-12 rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300
-    }
-.contactTextArea{
-    @apply w-full rounded-lg border-b-[1px] border-b-gray-600 bg-[#191b1e] text-lightText px-4 py-2 active:outline-none focus-visible:outline-designColor outline-none focus-visible:border-b-transparent duration-300 resize-none
 }
+
+@layer components {
+    .bannerIcon {
+        @apply w-10 h-10 bg-accentColor-light dark:bg-accentColor-dark text-zinc-600 dark:text-zinc-400 inline-flex items-center justify-center rounded-lg hover:text-lightText-light dark:hover:text-lightText-dark transition-colors;
+    }
+
+    .resumeLi {
+        @apply relative w-full flex flex-col gap-2.5 border-l-[6px] border-l-zinc-600 dark:border-l-zinc-500 px-8 py-6;
+    }
+
+    .resumeLi::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 15px;
+        height: 15px;
+        width: 15px;
+        border-radius: 50%;
+        border: 2px solid theme('colors.accentColor.light');
+        background: theme('colors.cardBg.light');
+    }
+
+    .dark .resumeLi::before {
+        border-color: theme('colors.accentColor.dark');
+        background: theme('colors.cardBg.dark');
+    }
+
+    .resumeLi .title {
+        @apply text-xl font-semibold text-zinc-800 dark:text-lightText-dark;
+    }
+
+    .resumeLi .subTitle {
+        @apply text-base text-zinc-600 dark:text-zinc-400 tracking-wide;
+    }
+
+    .resumeLi .result {
+        @apply w-full h-1.5 rounded-lg bg-zinc-200 dark:bg-zinc-700;
+    }
+
+    .resumeLi .experience {
+        @apply text-base text-zinc-700 dark:text-zinc-300 font-medium tracking-wide leading-relaxed;
+    }
+
+    .resumeLi .date {
+        @apply text-sm text-zinc-500 dark:text-zinc-400;
+    }
+
+    .contactInput {
+        @apply w-full h-12 rounded-lg border border-borderColor-light dark:border-borderColor-dark bg-cardBg-light dark:bg-cardBg-dark px-4 text-lightText-light dark:text-lightText-dark outline-none focus:border-designColor transition-colors;
+    }
+
+    .contactTextArea {
+        @apply w-full rounded-lg border border-borderColor-light dark:border-borderColor-dark bg-cardBg-light dark:bg-cardBg-dark p-4 text-lightText-light dark:text-lightText-dark outline-none focus:border-designColor transition-colors resize-none;
+    }
 }
 
 .active {
-    color: white;
+    @apply text-designColor;
 }
-.scrollbar-hide::-webkit-scrollbar{
+
+.scrollbar-hide::-webkit-scrollbar {
     display: none;
 }

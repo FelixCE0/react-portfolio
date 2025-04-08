@@ -1,33 +1,28 @@
 import React from 'react'
 import { HiArrowRight } from "react-icons/hi";
 
-const Card = ({title,des,icon}) => {
+const Card = ({ title, des, icon }) => {
   return (
-    <div className="w-full px-12 h-80 py-10 rounded-lg shadow-shadowOne flex items-center bg-gradient-to-r from-bodyColor to-[#202327] group hover:bg-gradient-to-b hover:from-black hover:to-[#1e2024] transition-colors duration-100 group">
-      <div className="h-72 overflow-y-hidden">
-        <div className="flex h-full flex-col gap-10 translate-y-16 group-hover:translate-y-0 transition-transform duration-500">
-          <div className="w-10 h-8 flex flex-col justify-between">
-        
-            {icon ? (
-              <span className="text-5xl text-designColor">{icon}</span>
-            ) : (
-              <>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-                <span className="w-full h-[2px] rounded-lg bg-designColor inline-flex"></span>
-              </>
-            )}
-          </div>
-          <div className="flex flex-col gap-6">
-            <h2 className="text-xl md:text-2xl font-titleFont font-bold text-gray-300">
-              {title}
-            </h2>
-            <p className="base">{des}</p>
-            <span className="text-2xl text-designColor">
-              <HiArrowRight />
-            </span>
-          </div>
+    <div className="group relative overflow-hidden rounded-lg border border-borderColor-light dark:border-borderColor-dark bg-cardBg-light dark:bg-cardBg-dark p-6 transition-all hover:shadow-shadowOne-light dark:hover:shadow-shadowOne-dark">
+      <div className="flex flex-col gap-5">
+        <div className="flex items-center gap-2">
+          {icon ? (
+            <span className="text-2xl text-designColor">{icon}</span>
+          ) : (
+            <div className="h-10 w-10">
+              <div className="h-2 w-full rounded-full bg-designColor mb-2"></div>
+              <div className="h-2 w-3/4 rounded-full bg-designColor"></div>
+            </div>
+          )}
+          <h3 className="text-lg font-semibold text-lightText-light dark:text-lightText-dark">
+            {title}
+          </h3>
+        </div>
+        <p className="text-sm text-zinc-600 dark:text-zinc-400">{des}</p>
+        <div className="mt-auto">
+          <span className="inline-flex items-center gap-1 text-sm font-medium text-designColor hover:gap-2 transition-all">
+            Learn More <HiArrowRight className="text-base" />
+          </span>
         </div>
       </div>
     </div>

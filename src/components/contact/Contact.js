@@ -1,6 +1,6 @@
-import React,{useState} from 'react'
-import Title from '../layouts/Title';
-import ContactLeft from './ContactLeft';
+import React, { useState } from 'react'
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import ContactLeft from './ContactLeft'
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -11,14 +11,6 @@ const Contact = () => {
   const [errMsg, setErrMsg] = useState("");
   const [successMsg, setSuccessMsg] = useState("");
 
-  // ========== Email Validation start here ==============
-  const emailValidation = () => {
-    return String(email)
-      .toLocaleLowerCase()
-      .match(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/);
-  };
-  // ========== Email Validation end here ================
-
   const handleSend = (e) => {
     e.preventDefault();
     if (username === "") {
@@ -27,15 +19,13 @@ const Contact = () => {
       setErrMsg("Phone number is required!");
     } else if (email === "") {
       setErrMsg("Please give your Email!");
-    } else if (!emailValidation(email)) {
-      setErrMsg("Give a valid Email!");
     } else if (subject === "") {
-      setErrMsg("Plese give your Subject!");
+      setErrMsg("Please give your Subject!");
     } else if (message === "") {
       setErrMsg("Message is required!");
     } else {
       setSuccessMsg(
-        `Thank you dear ${username}, Your Messages has been sent Successfully!`
+        `Thank you ${username}, your message has been sent successfully!`
       );
       setErrMsg("");
       setUsername("");
@@ -45,120 +35,140 @@ const Contact = () => {
       setMessage("");
     }
   };
+
   return (
-    <section
-      id="contact"
-      className="w-full py-20 border-b-[1px] border-b-black"
-    >
-      <div className="flex justify-center items-center text-center">
-        <Title title="CONTACT" des="Contact With Me" />
-      </div>
-      <div className="w-full">
-        <div className="w-full h-auto flex flex-col lgl:flex-row justify-between">
-          <ContactLeft />
-          <div className="w-full lgl:w-[60%] h-full py-10 bg-gradient-to-r from-[#1e2024] to-[#23272b] flex flex-col gap-8 p-4 lgl:p-8 rounded-lg shadow-shadowOne">
-            <form className="w-full flex flex-col gap-4 lgl:gap-6 py-2 lgl:py-5">
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
-              <div className="w-full flex flex-col lgl:flex-row gap-10">
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wide">
-                    Your name
-                  </p>
-                  <input
-                    onChange={(e) => setUsername(e.target.value)}
-                    value={username}
-                    className={`${
-                      errMsg === "Username is required!" &&
-                      "outline-designColor"
-                    } contactInput`}
-                    type="text"
-                  />
-                </div>
-                <div className="w-full lgl:w-1/2 flex flex-col gap-4">
-                  <p className="text-sm text-gray-400 uppercase tracking-wide">
-                    Phone Number
-                  </p>
-                  <input
-                    onChange={(e) => setPhoneNumber(e.target.value)}
-                    value={phoneNumber}
-                    className={`${
-                      errMsg === "Phone number is required!" &&
-                      "outline-designColor"
-                    } contactInput`}
-                    type="text"
-                  />
+    <section id="contact" className="py-16 md:py-24">
+      <div className="container mx-auto px-4">
+        <div className="max-w-2xl mx-auto text-center mb-12">
+          <h2 className="text-3xl font-bold text-lightText-light dark:text-lightText-dark mb-4">
+            Get in Touch
+          </h2>
+          <p className="text-zinc-600 dark:text-zinc-400">
+            Have a question or want to work together?
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <div className="lg:col-span-1">
+              <div className="rounded-2xl border border-borderColor-light dark:border-borderColor-dark bg-cardBg-light dark:bg-cardBg-dark p-6">
+                <h3 className="text-xl font-semibold text-lightText-light dark:text-lightText-dark mb-4">
+                  Contact Information
+                </h3>
+                <div className="space-y-4">
+                  <div>
+                    <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Email</p>
+                    <p className="text-lightText-light dark:text-lightText-dark">correafelix7@gmail.com</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">Phone</p>
+                    <p className="text-lightText-light dark:text-lightText-dark">786-626-2257</p>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-3">Social</p>
+                    <div className="flex gap-4">
+                      <a href="#" className="bannerIcon">
+                        <FaGithub />
+                      </a>
+                      <a href="#" className="bannerIcon">
+                        <FaLinkedinIn />
+                      </a>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Email
-                </p>
-                <input
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
-                  className={`${
-                    errMsg === "Please give your Email!" &&
-                    "outline-designColor"
-                  } contactInput`}
-                  type="email"
-                />
+            </div>
+
+            <div className="lg:col-span-2">
+              <div className="rounded-2xl border border-borderColor-light dark:border-borderColor-dark bg-cardBg-light dark:bg-cardBg-dark p-6">
+                <form className="space-y-6">
+                  {errMsg && (
+                    <div className="p-4 rounded-lg bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 text-sm">
+                      {errMsg}
+                    </div>
+                  )}
+                  {successMsg && (
+                    <div className="p-4 rounded-lg bg-green-50 dark:bg-green-900/10 text-green-600 dark:text-green-400 text-sm">
+                      {successMsg}
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-2">
+                        Your Name
+                      </label>
+                      <input
+                        type="text"
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                        className="contactInput"
+                        placeholder="John Doe"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-2">
+                        Phone Number
+                      </label>
+                      <input
+                        type="tel"
+                        value={phoneNumber}
+                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        className="contactInput"
+                        placeholder="+1 (555) 000-0000"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-2">
+                      Email Address
+                    </label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="contactInput"
+                      placeholder="john@example.com"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-2">
+                      Subject
+                    </label>
+                    <input
+                      type="text"
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
+                      className="contactInput"
+                      placeholder="How can I help you?"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-zinc-600 dark:text-zinc-400 mb-2">
+                      Message
+                    </label>
+                    <textarea
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                      className="contactTextArea"
+                      rows="6"
+                      placeholder="Your message here..."
+                    ></textarea>
+                  </div>
+
+                  <button
+                    onClick={handleSend}
+                    type="submit"
+                    className="w-full bg-designColor text-white py-3 px-4 rounded-lg font-medium hover:bg-designColor/90 transition-colors"
+                  >
+                    Send Message
+                  </button>
+                </form>
               </div>
-              <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Subject
-                </p>
-                <input
-                  onChange={(e) => setSubject(e.target.value)}
-                  value={subject}
-                  className={`${
-                    errMsg === "Plese give your Subject!" &&
-                    "outline-designColor"
-                  } contactInput`}
-                  type="text"
-                />
-              </div>
-              <div className="flex flex-col gap-4">
-                <p className="text-sm text-gray-400 uppercase tracking-wide">
-                  Message
-                </p>
-                <textarea
-                  onChange={(e) => setMessage(e.target.value)}
-                  value={message}
-                  className={`${
-                    errMsg === "Message is required!" && "outline-designColor"
-                  } contactTextArea`}
-                  cols="30"
-                  rows="8"
-                ></textarea>
-              </div>
-              <div className="w-full">
-                <button
-                  onClick={handleSend}
-                  className="w-full h-12 bg-[#141518] rounded-lg text-base text-gray-400 tracking-wider uppercase hover:text-white duration-300 hover:border-[1px] hover:border-designColor border-transparent"
-                >
-                  Send Message
-                </button>
-              </div>
-              {errMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-orange-500 text-base tracking-wide animate-bounce">
-                  {errMsg}
-                </p>
-              )}
-              {successMsg && (
-                <p className="py-3 bg-gradient-to-r from-[#1e2024] to-[#23272b] shadow-shadowOne text-center text-green-500 text-base tracking-wide animate-bounce">
-                  {successMsg}
-                </p>
-              )}
-            </form>
+            </div>
           </div>
         </div>
       </div>
@@ -166,4 +176,4 @@ const Contact = () => {
   );
 }
 
-export default Contact
+export default Contact;

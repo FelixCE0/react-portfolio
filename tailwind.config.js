@@ -5,6 +5,7 @@ module.exports = {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
     "node_modules/flowbite/**/*.js"
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       screens: {
@@ -18,17 +19,35 @@ module.exports = {
         xl: "1280px",
       },
       fontFamily: {
-        bodyFont: ["Poppins", "sans-serif"],
-        titleFont: ["Montserrat", "sans-serif"],
+        bodyFont: ["Inter", "sans-serif"],
+        titleFont: ["Cal Sans", "sans-serif"],
       },
       colors: {
-        bodyColor: "#121212",
-        lightText: "#c4cfde",
-        boxBg: "linear-gradient(145deg, #1e2024, #23272b)",
-        designColor: "#A7F3D0",
+        bodyColor: {
+          light: "#ffffff",
+          dark: "#09090b"
+        },
+        lightText: {
+          light: "#09090b",
+          dark: "#fafafa"
+        },
+        cardBg: {
+          light: "#fafafa",
+          dark: "#18181b"
+        },
+        borderColor: {
+          light: "#e4e4e7",
+          dark: "#27272a"
+        },
+        designColor: "#3b82f6",
+        accentColor: {
+          light: "#f4f4f5",
+          dark: "#27272a"
+        }
       },
       boxShadow: {
-        shadowOne: "10px 10px 19px #1c1e22, -10px -10px 19px #262a2e",
+        'shadowOne-light': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+        'shadowOne-dark': '0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3)',
       },
     },
   },
