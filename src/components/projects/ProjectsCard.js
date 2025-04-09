@@ -1,8 +1,7 @@
 import React from 'react'
 import { BsGithub } from "react-icons/bs";
-import { FaGlobe } from "react-icons/fa";
 
-const ProjectsCard = ({ title, des, src }) => {
+const ProjectsCard = ({ title, des, src, githubUrl }) => {
   return (
     <div className="group relative overflow-hidden rounded-lg border border-borderColor-light dark:border-borderColor-dark bg-cardBg-light dark:bg-cardBg-dark transition-all hover:shadow-shadowOne-light dark:hover:shadow-shadowOne-dark">
       <div className="relative aspect-video overflow-hidden">
@@ -19,11 +18,13 @@ const ProjectsCard = ({ title, des, src }) => {
             {title}
           </h3>
           <div className="flex gap-3">
-            <a href="#" className="text-zinc-600 hover:text-lightText-light dark:text-zinc-400 dark:hover:text-lightText-dark transition-colors">
+            <a
+              href={githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-600 hover:text-lightText-light dark:text-zinc-400 dark:hover:text-lightText-dark transition-colors"
+            >
               <BsGithub className="text-xl" />
-            </a>
-            <a href="#" className="text-zinc-600 hover:text-lightText-light dark:text-zinc-400 dark:hover:text-lightText-dark transition-colors">
-              <FaGlobe className="text-xl" />
             </a>
           </div>
         </div>

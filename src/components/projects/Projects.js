@@ -9,19 +9,22 @@ const Projects = () => {
 
   const projectsData = [
     {
-      title: "E-commerce Website",
-      des: "HTML5 CSS3",
-      src: projectOne
+      title: "Portfolio-Laravel",
+      des: "PHP Laravel Vue.js",
+      src: projectOne,
+      githubUrl: "https://github.com/FelixCE0/Portfolio-Laravel"
     },
     {
-      title: "Auricle-Website",
-      des: "Sass Scss",
-      src: projectTwo
+      title: "Laravel-Chatgpt",
+      des: "PHP Laravel OpenAI",
+      src: projectTwo,
+      githubUrl: "https://github.com/FelixCE0/Laravel-Chatgpt"
     },
     {
-      title: "Todolist",
-      des: "Javascript",
-      src: projectThree
+      title: "vercel-laravel",
+      des: "PHP Laravel Vercel",
+      src: projectThree,
+      githubUrl: "https://github.com/FelixCE0/vercel-laravel"
     }
   ];
 
@@ -58,6 +61,7 @@ const Projects = () => {
               title={project.title}
               des={project.des}
               src={project.src}
+              githubUrl={project.githubUrl}
             />
           </motion.div>
         ))}
@@ -79,6 +83,7 @@ const Projects = () => {
                 title={projectsData[currentCard].title}
                 des={projectsData[currentCard].des}
                 src={projectsData[currentCard].src}
+                githubUrl={projectsData[currentCard].githubUrl}
               />
             </motion.div>
           </AnimatePresence>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import ContactLeft from './ContactLeft'
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [username, setUsername] = useState("");
@@ -13,27 +14,44 @@ const Contact = () => {
 
   const handleSend = (e) => {
     e.preventDefault();
-    if (username === "") {
-      setErrMsg("Username is required!");
-    } else if (phoneNumber === "") {
-      setErrMsg("Phone number is required!");
-    } else if (email === "") {
-      setErrMsg("Please give your Email!");
-    } else if (subject === "") {
-      setErrMsg("Please give your Subject!");
-    } else if (message === "") {
-      setErrMsg("Message is required!");
-    } else {
-      setSuccessMsg(
-        `Thank you ${username}, your message has been sent successfully!`
-      );
-      setErrMsg("");
-      setUsername("");
-      setPhoneNumber("");
-      setEmail("");
-      setSubject("");
-      setMessage("");
-    }
+    // Removed validation block as requested
+    // NOTE: Email sending will still fail until EmailJS credentials are configured.
+
+    // EmailJS configuration
+    // Using fallback values in case fields were empty
+    const templateParams = {
+      from_name: username || 'Not Provided',
+      from_email: email || 'Not Provided',
+      to_email: 'correafelix7@gmail.com',
+      phone_number: phoneNumber || 'Not Provided',
+      subject: subject || 'No Subject',
+      message: message || 'No Message',
+    };
+
+    // Send email using EmailJS
+    emailjs.send(
+      'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
+      'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+      templateParams,
+      'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+    )
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        // Updated success message slightly
+        setSuccessMsg(`Thank you ${username || 'User'}, your message submission has been processed!`);
+        setErrMsg("");
+        // Clear fields regardless of initial state
+        setUsername("");
+        setPhoneNumber("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      })
+      .catch((error) => {
+        console.log('FAILED...', error);
+        // Keeping the original error message for consistency
+        setErrMsg("Failed to send message. Please try again later.");
+      });
   };
 
   return (

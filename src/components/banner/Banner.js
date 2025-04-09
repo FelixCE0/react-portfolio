@@ -34,7 +34,7 @@ const Banner = () => {
               {/* Social Links */}
               <div className="flex items-center gap-6 pt-4">
                 <motion.a
-                  href="https://github.com/felixecorehb"
+                  href="https://github.com/FelixCE0"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}
@@ -44,7 +44,7 @@ const Banner = () => {
                   <FaGithub className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors" />
                 </motion.a>
                 <motion.a
-                  href="https://linkedin.com/in/felix-correa-hidalgo"
+                  href="https://www.linkedin.com/in/felix-correa-hidalgo-210313254/"
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ scale: 1.05 }}

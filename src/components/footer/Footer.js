@@ -76,7 +76,7 @@ const Footer = () => {
             </h3>
             <div className="flex gap-4">
               <a
-                href="https://github.com/felixecorehb"
+                href="https://github.com/FelixCE0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
@@ -84,7 +84,7 @@ const Footer = () => {
                 <FaGithub className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/in/felix-correa-hidalgo"
+                href="https://www.linkedin.com/in/felix-correa-hidalgo-210313254/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
